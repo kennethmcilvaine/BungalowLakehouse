@@ -40,16 +40,16 @@ const Nav = () => {
       <div className="nav">
         <div>
           <a href="#reservations">Reservations</a>
-          <a href="">Order Food</a>
-          <a href="">Menus</a>
+          <a href="#reservations">Order Food</a>
+          <a href="#reservations">Menus</a>
         </div>
           <a href="#home">
             <img alt="Bungalow lakehouse logo" src={require("./assets/oldlogo.png")}></img>
           </a>
         <div>
-          <a href="">Live Entertainment</a>
-          <a href="">About Us</a>
-          <a href="">Comedy Bungalow</a>
+          <a href="#reservations">Live Entertainment</a>
+          <a href="#reservations">About Us</a>
+          <a href="#reservations">Comedy Bungalow</a>
         </div>
       </div>
     </div>
