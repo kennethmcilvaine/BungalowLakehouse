@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.93ef2ec8.css",
+    "main.js": "/static/js/main.65ecef11.js",
+    "static/js/453.16b4b5d6.chunk.js": "/static/js/453.16b4b5d6.chunk.js",
+    "static/media/cleanedHomepage.png": "/static/media/cleanedHomepage.efe8b417c28f528f770d.png",
+    "static/media/oldlogo.png": "/static/media/oldlogo.5a00baab88d29e38a456.png",
+    "static/media/HamburgHand-Regular.otf": "/static/media/HamburgHand-Regular.999d2e402b5b9fd419f0.otf",
+    "static/media/Moret-Book.otf": "/static/media/Moret-Book.8a40a717edb3264f6b60.otf",
+    "index.html": "/index.html",
+    "main.93ef2ec8.css.map": "/static/css/main.93ef2ec8.css.map",
+    "main.65ecef11.js.map": "/static/js/main.65ecef11.js.map",
+    "453.16b4b5d6.chunk.js.map": "/static/js/453.16b4b5d6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93ef2ec8.css",
+    "static/js/main.65ecef11.js"
+  ]
+}
