@@ -24,7 +24,7 @@ const Nav = () => {
   useEffect(()=> {
       const handleScroll = () => {
          let p = window.scrollY
-          setNavSize((p > 40) ? "wide" : (navSize == "wide" || navSize == "thin") ? "thin" : "")
+          setNavSize((p > 40) ? "wide" : (navSize === "wide" || navSize === "thin") ? "thin" : "")
       };
       window.addEventListener("scroll", handleScroll);
       return(() => {
@@ -40,16 +40,16 @@ const Nav = () => {
       <div className="nav">
         <div>
           <a href="#reservations">Reservations</a>
-          <a>Order Food</a>
-          <a>Menus</a>
+          <a href="">Order Food</a>
+          <a href="">Menus</a>
         </div>
           <a href="#home">
-            <img src={require("./assets/oldlogo.png")}></img>
+            <img alt="Bungalow lakehouse logo" src={require("./assets/oldlogo.png")}></img>
           </a>
         <div>
-          <a>Entertainment</a>
-          <a>Comedy Bungalow</a>
-          <a>About Us</a>
+          <a href="">Live Entertainment</a>
+          <a href="">About Us</a>
+          <a href="">Comedy Bungalow</a>
         </div>
       </div>
     </div>
@@ -60,7 +60,7 @@ const HomePage = () => {
   return (
     <div className='homepage' id="home">
       <h1>Eat, drink, relax.</h1>
-      <div className="bookNow">BOOK NOW</div>
+      <div className="bookNow"><a href="#reservations">BOOK NOW</a></div>
     </div>
   )
 }
