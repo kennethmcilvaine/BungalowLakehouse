@@ -88,6 +88,7 @@ html {
 /* NAVIGATION */
 
 .navContainer {
+  margin-left: 10%;
   z-index: 2;
   width: 80vw;
   top: 40px;
