@@ -1,5 +1,4 @@
 /* STYLING GUIDE */
-
 /* headings */
 @font-face {
   font-family: "Moret";
@@ -17,29 +16,66 @@
   /* color: #a09597; gray */
   /* color: #f7f3f2; off white */
   /* color: #ffffff; white */
-
 /* END STYLING GUIDE */
-
 
 html {
   scroll-behavior: smooth;
+  background-color: #f7f3f2;
   z-index: 1;
 }
-
-
-/* RESERVATIONS */
-
-.reservations {
+/* temporary */
+.reservations, .entertainment, .menus, .orderfood, .aboutus {
   height: 100vh;
 }
+.aboutus, .orderfood, .entertainment {
+  background-color: #fff;
+}
 
-/* END RESERVATIONS */
+/* FOOTER */
+.footer {
+  font-family: "Manrope";
+  color:#2d001f;
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 20%;
+  padding-bottom: 5%;
+}
 
+.footercol h1{
+  font-family: "Moret";
+}
+
+.footercol a{
+  text-decoration: none;
+  color:#2d001f;
+  -webkit-transition: opacity .1s;
+  -moz-transition: opacity .1s;
+  -o-transition: opacity .1s;
+  transition: opacity .1s;
+}
+
+.social {
+  width: 20%
+}
+
+.social img {
+  height: 3vh;
+  padding-right: 15%;
+  -webkit-transition: opacity .1s;
+  -moz-transition: opacity .1s;
+  -o-transition: opacity .1s;
+  transition: opacity .1s;
+}
+
+.footer a:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+/* END FOOTER */
 
 /* HOMEPAGE */
-
-.homepage {
-  background-color: #f7f3f2;
+.home {
   background-image: url(./assets/cleanedHomepage.png);
   background-size: contain;
   background-position: center;
@@ -51,7 +87,7 @@ html {
   justify-content: center;
 }
 
-.homepage h1 {
+.home h1 {
   margin-bottom: 10%;
   position: absolute;
   font-family: "Moret";
@@ -85,12 +121,9 @@ html {
   padding-top: 1.5%;
   padding-bottom: 1.5%;
 }
-
 /* END HOMEPAGE */
 
-
 /* NAVIGATION */
-
 .navContainer {
   margin-left: 10%;
   z-index: 2;
@@ -187,10 +220,10 @@ html {
 
 .nav a {
   color: #fff;
-      -webkit-transition: color .25s;
-    -moz-transition: color .25s;
-    -o-transition: color .25s;
-    transition: color .25s;
+  -webkit-transition: color .1s;
+  -moz-transition: color .1s;
+  -o-transition: color .1s;
+  transition: color .1s;
     text-decoration: none;
 }
 
@@ -201,7 +234,6 @@ html {
 .nav a:hover {
   color: #a09597;
 }
-
 /* END NAVIGATION */
 
 
