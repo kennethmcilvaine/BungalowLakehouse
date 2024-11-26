@@ -31,12 +31,31 @@ h1 {
 /* END GLOBAL */
 
 /* temporary */
-.reservations, .entertainment, .orderfood, .aboutus {
+/* .reservations, .entertainment, .orderfood, .aboutus {
   min-height: 10vh;
 }
 .aboutus, .orderfood, .entertainment {
   background-color: #fff;
+} */
+
+/* ENTERTAINMENT*/
+/* END ENTERTAINMENT */
+
+/* RESERVATIONS */
+.reservations {
+  height: 100vh;
+  background-image: url("./assets/lakehouse.png");
+  background-size: cover;
+  background-position: top;
 }
+
+.reservations h1 {
+  color: #fcc910;
+  width: 100%;
+  text-align: center;
+  font-size: 5em;
+}
+/* END RESERVATIONS */
 
 /* MENUS */
 .menus {
@@ -92,7 +111,8 @@ h1 {
   width: 60%;
   display: flex;
   justify-content: space-around;
-  margin-left: 20%;
+  padding-left: 20%;
+  padding-right: 20%;
   padding-top: 3%;
 }
 
