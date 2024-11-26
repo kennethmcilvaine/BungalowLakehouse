@@ -18,18 +18,72 @@
   /* color: #ffffff; white */
 /* END STYLING GUIDE */
 
+/* GLOBAL */
 html {
   scroll-behavior: smooth;
   background-color: #f7f3f2;
   z-index: 1;
 }
+h1 {
+  font-family: "Moret";
+  color:#2d001f;
+}
+/* END GLOBAL */
+
 /* temporary */
-.reservations, .entertainment, .menus, .orderfood, .aboutus {
-  height: 100vh;
+.reservations, .entertainment, .orderfood, .aboutus {
+  min-height: 10vh;
 }
 .aboutus, .orderfood, .entertainment {
   background-color: #fff;
 }
+
+/* MENUS */
+.menus {
+  padding: 3%;
+  /* background-color: #fff; */
+}
+
+.menuDropdown {
+  color: #2d001f;
+  font-family: "Manrope";
+  margin: 1%;
+  margin-bottom: 3%;
+  margin-left: 40%;
+  width: 20%;
+}
+
+.pdf {
+  width: 20%;
+  cursor: pointer;
+}
+
+.pdfContainer {
+  text-align: center;
+}
+
+.menus canvas {
+  -webkit-transition: transform .5s, box-shadow .5s;
+  -moz-transition: transform .5s, box-shadow .5s;
+  -o-transition: transform .5s, box-shadow .5s;
+  transition: transform .5s, box-shadow .5s;
+}
+
+
+.bigCanvas {
+  box-shadow: 3px 3px 30px 5px#111;
+  transform: scale(2);
+
+}
+
+.menus h1{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 4vw;
+}
+/* END MENUS */
 
 /* FOOTER */
 .footer {
@@ -39,7 +93,7 @@ html {
   display: flex;
   justify-content: space-around;
   margin-left: 20%;
-  padding-bottom: 5%;
+  padding-top: 3%;
 }
 
 .footercol h1{
@@ -71,6 +125,27 @@ html {
 .footer a:hover {
   cursor: pointer;
   opacity: .5;
+}
+
+.createdby {
+  font-family: "Manrope";
+  width: 94%;
+  text-align: center;
+  padding: 3%;
+}
+
+.createdby a{
+  padding: 1px;
+  color: #2d001f;
+  text-decoration: none;
+  -webkit-transition: background-color .25s;
+  -moz-transition: background-color .25s;
+  -o-transition: background-color .25s;
+  transition: background-color .25s;
+}
+
+.createdby a:hover {
+  background-color:#fcc910
 }
 /* END FOOTER */
 
@@ -107,7 +182,7 @@ html {
   -webkit-transition: padding .25s;
   -moz-transition: padding .25s;
   -o-transition: padding .25s;
-  transition: padding.25s;
+  transition: padding .25s;
 }
 
 .bookNow a{
