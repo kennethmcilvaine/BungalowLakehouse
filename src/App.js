@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { usePdf } from '@mikecousins/react-pdf';
+import {TextField, Button} from '@mui/material';
+
 // import listReactFiles from 'list-react-files';
 import Dropdown from 'react-dropdown';
 import './dropdown.css';
@@ -11,10 +13,11 @@ function App() {
     <>
       <Nav></Nav>
       <Home></Home>
-      <AboutUs></AboutUs>
       <Reservations></Reservations>
       <OrderFood></OrderFood>
       <Menus></Menus>
+      {/* TODO Add map to aboutus section maybe */}
+      <AboutUs></AboutUs>
       <Entertainment></Entertainment>
       <Footer></Footer>
       </>
@@ -50,7 +53,7 @@ const Nav = () => {
         <div>
         <a href="#menus">Menus</a>
           <a href="#entertainment">Live Entertainment</a>
-          <a>Comedy Bungalow</a>
+          <a href='http://comedybungalow.netlify.app'>Comedy Bungalow</a>
         </div>
       </div>
     </div>
@@ -68,14 +71,54 @@ const Home = () => {
 
 const AboutUs = () => {
   return (
-    <div className='aboutus' id='aboutus'></div>
+    <div className='aboutus' id='aboutus'>
+    </div>
   )
 }
 
 const Reservations = () => {
   return (
     <div className='reservations' id="reservations">
+      <LargePartyForm></LargePartyForm>
+      <img className="opentable" src={require("./assets/opentable.png")}></img>
     </div>
+  )
+}
+
+const LargePartyForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+  });
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Handle form submission logic here
+    console.log(formData);
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className='largePartyForm'>
+        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+
+      <Button type="submit" variant="contained" color="primary" fullWidth>
+        Submit
+      </Button>
+    </form>
   )
 }
 
@@ -184,8 +227,8 @@ const Footer = () => {
         <div className='footercol social'>
           <h1>Social Media</h1>
           <a target="_blank" href="https://www.facebook.com/BungalowLakehouse/?ref=hl"><img alt="facebook" src={require("./assets/facebook.png")}></img></a>
-          <a target="_blank" href="https://twitter.com/TheLakehouseCAS"><img alt="instagram" src={require("./assets/instagram.png")}></img></a>
-          <a target="_blank" href="https://www.instagram.com/bungalowlakehouse/?hl=en"><img alt="twitter" src={require("./assets/twitter.png")}></img></a>
+          <a target="_blank" href="https://www.instagram.com/bungalowlakehouse/?hl=en"><img alt="instagram" src={require("./assets/instagram.png")}></img></a>
+          <a target="_blank" href="https://twitter.com/TheLakehouseCAS"><img alt="twitter" src={require("./assets/twitter.png")}></img></a>
         </div>
     </div>
     <div className='createdby'>
