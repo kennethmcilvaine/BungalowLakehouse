@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { usePdf } from '@mikecousins/react-pdf';
-import {TextField, Button} from '@mui/material';
+// import {TextField, Button} from '@mui/material';
 
 // import listReactFiles from 'list-react-files';
 import Dropdown from 'react-dropdown';
@@ -85,42 +85,42 @@ const Reservations = () => {
   )
 }
 
-const LargePartyForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-  });
+// const LargePartyForm = () => {
+//   const [formData, setFormData] = useState({
+//     name: '',
+//     email: '',
+//   });
 
-  const handleChange = (event) => {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
-  };
+//   const handleChange = (event) => {
+//     setFormData({
+//       ...formData,
+//       [event.target.name]: event.target.value,
+//     });
+//   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
-  };
+//   const handleSubmit = (event) => {
+//     event.preventDefault();
+//     // Handle form submission logic here
+//     console.log(formData);
+//   };
 
-  return (
-    <form onSubmit={handleSubmit} className='largePartyForm'>
-        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
-        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
-        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
-        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
-        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
-        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
-        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
-        <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+//   return (
+//     <form onSubmit={handleSubmit} className='largePartyForm'>
+//         <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+//         <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+//         <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+//         <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+//         <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+//         <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+//         <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
+//         <TextField label="Name" name="name" value={formData.name} onChange={handleChange}  margin="normal"/>
 
-      <Button type="submit" variant="contained" color="primary" fullWidth>
-        Submit
-      </Button>
-    </form>
-  )
-}
+//       <Button type="submit" variant="contained" color="primary" fullWidth>
+//         Submit
+//       </Button>
+//     </form>
+//   )
+// }
 
 const OrderFood = () => {
   return (
