@@ -79,8 +79,8 @@ const AboutUs = () => {
 const Reservations = () => {
   return (
     <div className='reservations' id="reservations">
-      <LargePartyForm></LargePartyForm>
-      <img className="opentable" src={require("./assets/opentable.png")}></img>
+      {/* <LargePartyForm></LargePartyForm> */}
+      {/* <img className="opentable" src={require("./assets/opentable.png")}></img> */}
     </div>
   )
 }
