@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { usePdf } from '@mikecousins/react-pdf';
+import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 // import {TextField, Button} from '@mui/material';
 
 // import listReactFiles from 'list-react-files';
@@ -11,17 +13,50 @@ function App() {
 
   return (
     <>
-      <Nav></Nav>
-      <Home></Home>
-      <Reservations></Reservations>
-      <OrderFood></OrderFood>
-      <Menus></Menus>
-      {/* TODO Add map to aboutus section maybe */}
-      <AboutUs></AboutUs>
-      <Entertainment></Entertainment>
-      <Footer></Footer>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/Food" element={<Food />} />
+          <Route path="/Entertainment" element={<Entertainment/>} />
+          <Route path="/AboutUs" element={<AboutUs/>} />
+        </Routes>
+      </BrowserRouter>
       </>
   );
+}
+
+const Landing = () => {
+  return (
+    <>
+      <Nav></Nav>
+      <Home></Home>
+      <div className='spacer'></div>
+      <Menus></Menus>
+      <Footer></Footer>
+    </>
+  )
+}
+
+
+const Food = () => {
+  return (
+    <>
+      <Nav></Nav>
+      <Reservations></Reservations>
+      <OrderFood></OrderFood>
+      <Footer></Footer>
+    </>
+  )
+}
+
+const Entertainment = () => {
+  return (
+    <>
+      <Nav></Nav>
+      <div className='entertainment' id="Entertainment"></div>
+      <Footer></Footer>
+    </>
+  )
 }
 
 
@@ -43,17 +78,17 @@ const Nav = () => {
     <div className={"navContainer " + navSize}>
       <div className="nav">
         <div>
-        <a href="#aboutus">About Us</a>
-          <a href="#reservations">Reservations</a>
-          <a href="#orderfood">Order Food</a>
+          <p><HashLink to="/Us">About Us</HashLink></p>
+          <p><HashLink to="/Food#Reservations">Reservations</HashLink></p>
+          <p><HashLink to="/Food#OrderFood">Order Food</HashLink></p>
         </div>
-          <a href="#home">
-            <img alt="Bungalow lakehouse logo" src={require("./assets/oldlogo.png")}></img>
-          </a>
+        <HashLink to="/#Home">
+            <img alt="Bungalow lakehouse logo" src={require("./assets/logo2.png")}></img>
+          </HashLink>
         <div>
-        <a href="#menus">Menus</a>
-          <a href="#entertainment">Live Entertainment</a>
-          <a href='http://comedybungalow.netlify.app'>Comedy Bungalow</a>
+        <p><HashLink to="/#Menus">Menus</HashLink></p>
+        <p><HashLink to="/Entertainment">Entertainment</HashLink></p>
+          <p><a href='http://comedybungalow.netlify.app'>Comedy Bungalow</a></p>
         </div>
       </div>
     </div>
@@ -62,23 +97,27 @@ const Nav = () => {
 
 const Home = () => {
   return (
-    <div className='home' id="home">
+    <div className='home' id="Home">
       <h1>Eat, drink, relax.</h1>
-      <div className="bookNow"><a href="#reservations">BOOK NOW</a></div>
+      <div className="bookNow"><HashLink to="/Food#Reservations">BOOK NOW</HashLink></div>
     </div>
   )
 }
 
 const AboutUs = () => {
   return (
-    <div className='aboutus' id='aboutus'>
+    <>
+      <Nav></Nav>
+    <div className='aboutus' id='AboutUs'>
     </div>
+      <Footer></Footer>
+    </>
   )
 }
 
 const Reservations = () => {
   return (
-    <div className='reservations' id="reservations">
+    <div className='reservations' id="Reservations">
       {/* <LargePartyForm></LargePartyForm> */}
       {/* <img className="opentable" src={require("./assets/opentable.png")}></img> */}
     </div>
@@ -124,7 +163,7 @@ const Reservations = () => {
 
 const OrderFood = () => {
   return (
-    <div className='orderfood' id='orderfood'></div>
+    <div className='orderfood' id='OrderFood'></div>
   )
 }
 
@@ -152,7 +191,7 @@ const Menus = () => {
   });
 
   return (
-    <div className='menus' id="menus">
+    <div className='menus' id="Menus">
       <h1>Menus</h1>
       <Dropdown className="menuDropdown" options={menus} menuClassName='dropdownMenu'
       onChange={(object)=>{setSelectedMenu(object.value)}} value={selectedMenu}/>
@@ -196,11 +235,7 @@ const PDFViewer = ({page, fileName, clicked, setClicked}) => {
   )
 }
 
-const Entertainment = () => {
-  return (
-    <div className='entertainment' id="entertainment"></div>
-  )
-}
+
 
 const Footer = () => {
   return (
@@ -208,12 +243,13 @@ const Footer = () => {
     <div className='footer'>
         <div className='footercol'>
           <h1>Navigation</h1>
-          <p><a href="#aboutus">About Us</a></p>
-          <p><a href="#reservations">Reservations</a></p>
-          <p><a href="#orderfood">Order Food</a></p>
-          <p><a href="#menus">Menus</a></p>
-          <p><a href="#entertainment">Live Entertainment</a></p>
-          <p><a>Comedy Bungalow</a></p>
+          <p><HashLink to="/#Home">Home</HashLink></p>
+          <p><HashLink to="/Us">About Us</HashLink></p>
+          <p><HashLink to="/Food#Reservations">Reservations</HashLink></p>
+          <p><HashLink to="/Food#OrderFood">Order Food</HashLink></p>
+          <p><HashLink to="/#Menus">Menus</HashLink></p>
+          <p><HashLink to="/Entertainment">Entertainment</HashLink></p>
+          <p><a href='http://comedybungalow.netlify.app'>Comedy Bungalow</a></p>
         </div>
         <div className='footercol location'>
           <h1>Location</h1>

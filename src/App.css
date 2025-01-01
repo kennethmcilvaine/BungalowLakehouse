@@ -11,7 +11,7 @@
   font-family: "Hamburg Hand";
   src: url('./assets/HamburgHand-Regular.otf');
 }
-  /* color: #2d001f; purple */
+  /* color: #731814; purple */
   /* color: #fcc910; gold */
   /* color: #a09597; gray */
   /* color: #f7f3f2; off white */
@@ -26,7 +26,7 @@ html {
 }
 h1 {
   font-family: "Moret";
-  color:#2d001f;
+  color: #731814;
 }
 /* END GLOBAL */
 
@@ -59,12 +59,13 @@ h1 {
 
 /* MENUS */
 .menus {
+  position: relative;
   padding: 3%;
 /*   background-color: #fff; */
 }
 
 .menuDropdown {
-  color: #2d001f;
+  color: #731814;
   font-family: "Manrope";
   margin: 1%;
   margin-bottom: 3%;
@@ -81,19 +82,6 @@ h1 {
   text-align: center;
 }
 
-.menus canvas {
-  -webkit-transition: transform .5s, box-shadow .5s;
-  -moz-transition: transform .5s, box-shadow .5s;
-  -o-transition: transform .5s, box-shadow .5s;
-  transition: transform .5s, box-shadow .5s;
-}
-
-
-.bigCanvas {
-  box-shadow: 3px 3px 30px 5px#111;
-  transform: scale(2);
-
-}
 
 .menus h1{
   padding: 0;
@@ -102,12 +90,32 @@ h1 {
   text-align: center;
   font-size: 4vw;
 }
+
+.bigCanvas {
+  display: block;
+  box-shadow: 2px 3px 3px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%) scale(2.5); */
+  animation: centerMenu .5s ease forwards;
+}
+
+@keyframes centerMenu {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    transform: translate(-50%, -0%) scale(2.5);
+  }
+}
+
 /* END MENUS */
 
 /* FOOTER */
 .footer {
   font-family: "Manrope";
-  color:#2d001f;
+  color: #731814;
   width: 60%;
   display: flex;
   justify-content: space-around;
@@ -122,7 +130,7 @@ h1 {
 
 .footercol a{
   text-decoration: none;
-  color:#2d001f;
+  color: #731814;
   -webkit-transition: opacity .1s;
   -moz-transition: opacity .1s;
   -o-transition: opacity .1s;
@@ -156,7 +164,7 @@ h1 {
 
 .createdby a{
   padding: 1px;
-  color: #2d001f;
+  color: #731814;
   text-decoration: none;
   -webkit-transition: background-color .25s;
   -moz-transition: background-color .25s;
@@ -171,7 +179,7 @@ h1 {
 
 /* HOMEPAGE */
 .home {
-  background-image: url(./assets/cleanedHomepage.png);
+  background-image: url(./assets/cleanedHomepage2.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -182,12 +190,20 @@ h1 {
   justify-content: center;
 }
 
+.spacer {
+
+  height: 70vh;
+  background-image: url("./assets/lakehouse.png");
+  background-size: cover;
+  background-position: top;
+}
+
 .home h1 {
   margin-bottom: 10%;
   position: absolute;
   font-family: "Moret";
   font-size: 11em;
-  color: #2d001f;
+  color: #731814;
 }
 
 
@@ -206,7 +222,7 @@ h1 {
 }
 
 .bookNow a{
-  color: #2d001f;
+  color: #731814;
   text-decoration: none;
 }
 
@@ -228,7 +244,7 @@ h1 {
   display: flex;
   justify-content: center;
   height: 7vh;
-  background-color: #2d001f;
+  background-color: #731814;
 }
 
 .wide {
@@ -268,16 +284,16 @@ h1 {
 }
 
 .nav img {
-  height: 9vh;
+  height: 5vh;
 }
 
-.thin img {
+/* .thin img {
   animation: large .5s ease forwards;
 }
 
 .wide img {
   animation: small .5s ease forwards;
-}
+} */
 
 @keyframes small {
   from {
